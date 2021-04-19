@@ -1,11 +1,13 @@
 <template>
   <div>
-    <h1>home Page</h1>
+    <h1>page slug = {{ this.$route.params.slug }}</h1>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'slug'
+}
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <h1>home Page</h1>
-  </div>
+  <div>404</div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: '404'
+}
 </script>
 
 <style lang="scss" scoped></style>
