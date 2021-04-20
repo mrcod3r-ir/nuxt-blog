@@ -1,12 +1,11 @@
 <template>
-  <div>
-    <HeroSection />
-    <h1>home Page</h1>
-  </div>
+  <div>HeroSection</div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'HeroSection'
+}
 </script>
 
 <style lang="scss" scoped></style>
