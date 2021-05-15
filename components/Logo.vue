@@ -1,8 +1,8 @@
 <template>
   <svg
     class="NuxtLogo"
-    width="245"
-    height="180"
+    :width="width || '245'"
+    :height="height || '180'"
     viewBox="0 0 452 342"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -20,6 +20,20 @@
     />
   </svg>
 </template>
+<script>
+export default {
+  props: {
+    width: {
+      type: String,
+      default: '245'
+    },
+    height: {
+      type: String,
+      default: '180'
+    }
+  }
+}
+</script>
 
 <style>
 .NuxtLogo {

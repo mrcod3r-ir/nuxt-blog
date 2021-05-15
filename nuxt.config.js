@@ -11,7 +11,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [ '~/assets/custom.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -33,13 +33,16 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
   bootstrapVue: {
     // Install the `IconsPlugin` plugin (in addition to `BootstrapVue` plugin)
-    icons: true
+    icons: true,
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false // Or `bvCSS: false`
   },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -49,5 +52,9 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    babel: {
+      compact: true
+    }
+  },
 }
