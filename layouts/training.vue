@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <Header />
-    <Nuxt class="mt-5" />
+    <Nuxt class="container mt-5" />
   </div>
 </template>
 
