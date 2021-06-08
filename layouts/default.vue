@@ -25,7 +25,9 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
+#__nuxt {
+  overflow-x: hidden;
+}
 .button--green {
   display: inline-block;
   border-radius: 4px;
