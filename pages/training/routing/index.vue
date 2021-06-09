@@ -2,7 +2,7 @@
   <div>
     <h2>this is routing page</h2>
     <div class="row mt-5">
-      <div class="col-3">
+      <div class="col-3 mb-3">
         <b-card
           border-variant="primary"
           header="product directory approach "
@@ -22,7 +22,7 @@
           >
         </b-card>
       </div>
-      <div class="col-3">
+      <div class="col-3 mb-3">
         <b-card
           border-variant="info  "
           header="product page by slug"
@@ -45,7 +45,7 @@
           >
         </b-card>
       </div>
-      <div class="col-3">
+      <div class="col-3 mb-3">
         <b-card
           border-variant="success"
           header="infinite params slug"
@@ -68,6 +68,118 @@
           >
         </b-card>
       </div>
+      <div class="col-3 mb-3">
+        <b-card
+          border-variant="warning"
+          header="route query params"
+          header-bg-variant="warning"
+          header-text-variant="white"
+          align="center"
+          style="height: 15rem"
+        >
+          <b-card-text
+            >click button for route to search page by query params
+            <i class="fa fa-sign-language" aria-hidden="true"></i>
+          </b-card-text>
+          <b-button variant="warning"
+            ><b-link
+              class="text-white"
+              href="/training/routing/search/query?query_param1=param1&query_param2=param2"
+              >search query page</b-link
+            ></b-button
+          >
+        </b-card>
+      </div>
+
+      <div class="col-3 mb-3">
+        <b-card
+          border-variant="danger"
+          header="navigate  without param"
+          header-bg-variant="danger"
+          header-text-variant="white"
+          align="center"
+          style="height: 15rem"
+        >
+          <b-card-text
+            >click button for navigate to page without param passing in
+            nuxt-link
+          </b-card-text>
+          <b-button variant="danger">
+            <nuxt-link
+              class="text-white"
+              :to="{ name: 'training-routing-navigate' }"
+              >navigate to product</nuxt-link
+            ></b-button
+          >
+        </b-card>
+      </div>
+      <div class="col-3 mb-3">
+        <b-card
+          border-variant="primary"
+          header="navigate by param"
+          header-bg-variant="primary"
+          header-text-variant="white"
+          align="center"
+          style="height: 15rem"
+        >
+          <b-card-text
+            >click button for navigate to page by param passing in nuxt-link
+          </b-card-text>
+          <b-button variant="primary">
+            <nuxt-link
+              class="text-white"
+              :to="{
+                name: 'training-routing-product',
+                params: { slug: 'some_slug' }
+              }"
+              >go to product</nuxt-link
+            >
+          </b-button>
+        </b-card>
+      </div>
+      <div class="col-3 mb-3">
+        <b-card
+          border-variant="warning"
+          header="navigate by method"
+          header-bg-variant="warning"
+          header-text-variant="white"
+          align="center"
+          style="height: 15rem"
+        >
+          <b-card-text
+            >click button for navigate to page by method by passing in nuxt-link
+          </b-card-text>
+          <b-button variant="warning" @click="navigateToProduct()">
+            go to product
+          </b-button>
+        </b-card>
+      </div>
+      <div class="col-3 mb-3">
+        <b-card
+          border-variant="info"
+          header="navigate by query"
+          header-bg-variant="info"
+          header-text-variant="white"
+          align="center"
+          style="height: 15rem"
+        >
+          <b-card-text
+            >click button for navigate to page by passing query and params in
+            nuxt-link
+          </b-card-text>
+          <b-button variant="info">
+            <nuxt-link
+              class="text-white"
+              :to="{
+                name: 'training-routing-product',
+                params: { slug: 'some_slug' },
+                query: { q1: 'some_query', query2: 'another_parameter' }
+              }"
+              >go to product</nuxt-link
+            >
+          </b-button>
+        </b-card>
+      </div>
     </div>
   </div>
 </template>
@@ -75,7 +187,16 @@
 <script>
 export default {
   name: 'Routing',
-  layout: 'training'
+  layout: 'training',
+  methods: {
+    navigateToProduct() {
+      alert('navigating by method this.$router.push()')
+      this.$router.push({
+        name: 'training-routing-product',
+        params: { slug: 'some_slug' }
+      })
+    }
+  }
 }
 </script>
 
