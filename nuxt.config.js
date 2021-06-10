@@ -44,6 +44,15 @@ export default {
     bootstrapCSS: false, // Or `css: false`
     bootstrapVueCSS: false // Or `bvCSS: false`
   },
+  router:{
+    parseQuery(query){
+      return require('qs').parse(query)
+    },
+    stringifyQuery(query) {
+      const result = require('qs').stringify(query)
+      return result ? '?'+ result : ''
+    }
+  },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {

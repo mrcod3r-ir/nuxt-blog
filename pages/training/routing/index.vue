@@ -173,9 +173,40 @@
               :to="{
                 name: 'training-routing-product',
                 params: { slug: 'some_slug' },
-                query: { q1: 'some_query', query2: 'another_parameter' }
+                query: {
+                  q1: 'some_query',
+                  query2: 'another_parameter',
+                  brand_id: [74, 65]
+                }
               }"
               >go to product</nuxt-link
+            >
+          </b-button>
+        </b-card>
+      </div>
+      <div class="col-3 mb-3">
+        <b-card
+          border-variant="success"
+          header="append query"
+          header-bg-variant="success"
+          header-text-variant="white"
+          align="center"
+          style="height: 15rem"
+        >
+          <b-card-text
+            >click button for navigate to navigate page for test append query
+          </b-card-text>
+          <b-button variant="success">
+            <nuxt-link
+              class="text-white"
+              :to="{
+                name: 'training-routing-navigate',
+                query: {
+                  q1: 'some_query',
+                  brand_id: [74, 65]
+                }
+              }"
+              >go to navigate</nuxt-link
             >
           </b-button>
         </b-card>

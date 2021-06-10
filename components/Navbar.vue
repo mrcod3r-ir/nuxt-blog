@@ -32,6 +32,7 @@
           </template>
           <b-dropdown-item href="/training/slots">slots</b-dropdown-item>
           <b-dropdown-item href="/training/watch">watch</b-dropdown-item>
+          <b-dropdown-item href="/training/computed">computed</b-dropdown-item>
           <b-dropdown-item href="/training/routing">routing</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
