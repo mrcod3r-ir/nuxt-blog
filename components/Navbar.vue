@@ -38,6 +38,15 @@
             asyncdata
           </b-dropdown-item>
           <b-dropdown-item href="/training/fetch"> fetch </b-dropdown-item>
+          <b-dropdown-item href="/training/errorhandling">
+            error handling
+          </b-dropdown-item>
+          <b-dropdown-item href="/training/errorhandling2">
+            error handling 2
+          </b-dropdown-item>
+          <b-dropdown-item href="/training/autocompletelist">
+            auto complete list
+          </b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>

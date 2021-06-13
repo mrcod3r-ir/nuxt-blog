@@ -15,5 +15,6 @@
     "titleBar.inactiveBackground": "#83256199",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#832561"
+  "peacock.color": "#832561",
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": false
 }
