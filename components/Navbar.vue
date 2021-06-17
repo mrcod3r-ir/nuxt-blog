@@ -30,22 +30,48 @@
             <b-icon-pencil></b-icon-pencil>
             Training
           </template>
-          <b-dropdown-item href="/training/slots">slots</b-dropdown-item>
-          <b-dropdown-item href="/training/watch">watch</b-dropdown-item>
-          <b-dropdown-item href="/training/computed">computed</b-dropdown-item>
-          <b-dropdown-item href="/training/routing">routing</b-dropdown-item>
-          <b-dropdown-item href="/training/asyncdata">
-            asyncdata
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-slots' }">slots</nuxt-link>
           </b-dropdown-item>
-          <b-dropdown-item href="/training/fetch"> fetch </b-dropdown-item>
-          <b-dropdown-item href="/training/errorhandling">
-            error handling
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-watch' }"> watch </nuxt-link>
           </b-dropdown-item>
-          <b-dropdown-item href="/training/errorhandling2">
-            error handling 2
+
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-computed' }">
+              computed
+            </nuxt-link>
           </b-dropdown-item>
-          <b-dropdown-item href="/training/autocompletelist">
-            auto complete list
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-routing' }"> routing </nuxt-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-asyncdata' }">
+              asyncdata
+            </nuxt-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-fetch' }"> fetch </nuxt-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-errorhandling' }">
+              error handling
+            </nuxt-link>
+          </b-dropdown-item>
+          <b-dropdown-item href="/">
+            <nuxt-link :to="{ name: 'training-errorhandling2' }">
+              error handling 2
+            </nuxt-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-autocompletelist' }">
+              auto complete list
+            </nuxt-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-nuxt-middleware' }">
+              nuxt middleware
+            </nuxt-link>
           </b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>

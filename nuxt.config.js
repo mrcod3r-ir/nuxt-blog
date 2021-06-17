@@ -45,6 +45,7 @@ export default {
     bootstrapVueCSS: false // Or `bvCSS: false`
   },
   router:{
+    middleware:['apiMiddleware'], //global middleware declare here
     parseQuery(query){
       return require('qs').parse(query)
     },
@@ -65,5 +66,6 @@ export default {
     babel: {
       compact: true
     }
-  },
+  }, 
+
 }
