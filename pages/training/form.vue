@@ -7,19 +7,24 @@
     <br />
     <h3>textinput component</h3>
     <text-input v-model="firstnameComponent" />
+    <br />
+    <h3>number picker</h3>
+    <number-picker :minValue="1" v-model="count" />
   </div>
 </template>
 
 <script>
+import NumberPicker from '~/components/ui/NumberPicker.vue'
 import TextInput from '~/components/ui/TextInput.vue'
 export default {
   name: 'Form',
-  components: { TextInput },
+  components: { TextInput, NumberPicker },
   layout: 'training',
   data() {
     return {
       firstName: '',
-      firstnameComponent: ''
+      firstnameComponent: '',
+      count: 1
     }
   },
   watch: {
