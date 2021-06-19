@@ -6,13 +6,15 @@
     <input id="firstName" v-model="firstName" type="text" />
     <br />
     <h3>textinput component</h3>
-    <!-- <TextInput v-model="firstnameComponent" /> -->
+    <text-input v-model="firstnameComponent" />
   </div>
 </template>
 
 <script>
+import TextInput from '~/components/ui/TextInput.vue'
 export default {
   name: 'Form',
+  components: { TextInput },
   layout: 'training',
   data() {
     return {
@@ -23,6 +25,9 @@ export default {
   watch: {
     firstName(value) {
       console.log(`firstname is ${value}`)
+    },
+    firstnameComponent(value) {
+      console.log(`firstnameComponent is ${value}`)
     }
   }
 }

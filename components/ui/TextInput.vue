@@ -12,6 +12,7 @@
 <script>
 export default {
   name: 'TextInput',
+  model: { event: 'change', prop: 'value' },
   props: {
     value: {
       type: String,
@@ -20,7 +21,7 @@ export default {
   },
   methods: {
     input(e) {
-      this.$emit('input', e.target.value)
+      this.$emit('change', e.target.value)
     }
   }
 }

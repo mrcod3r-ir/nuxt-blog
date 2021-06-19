@@ -78,6 +78,11 @@
               validate
             </nuxt-link>
           </b-dropdown-item>
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-form' }">
+              custom input
+            </nuxt-link>
+          </b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>

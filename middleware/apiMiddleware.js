@@ -1,7 +1,7 @@
 export default function (context) {
   const promise = new Promise((resolve) => {
     setTimeout(() => {
-      console.log('request resolved')
+      console.log('api middleware request resolved')
       resolve({ user_id: 1 })
     }, 2000)
   })
