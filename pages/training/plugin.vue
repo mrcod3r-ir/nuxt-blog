@@ -1,16 +1,13 @@
 <template>
   <div>
-    <h1>form</h1>
+    <h1>plugin</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Form',
-  layout: 'training',
-  data() {
-    return {}
-  }
+  name: 'Plugin',
+  layout: 'training'
 }
 </script>
 

@@ -79,9 +79,18 @@
             </nuxt-link>
           </b-dropdown-item>
           <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-form' }">
-              custom input
+            <nuxt-link :to="{ name: 'training-form' }"> form </nuxt-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-custom-ui' }">
+              custom-ui
             </nuxt-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-life' }"> life </nuxt-link>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <nuxt-link :to="{ name: 'training-plugin' }"> plugin </nuxt-link>
           </b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
