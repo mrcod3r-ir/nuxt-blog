@@ -1,6 +1,8 @@
 <template>
   <div>
     <h1>plugin</h1>
+    <br />
+    <p>watch console log</p>
   </div>
 </template>
 
