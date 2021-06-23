@@ -11,10 +11,6 @@
 <script>
 export default {
   name: 'NumberPicker',
-  model: {
-    event: 'change',
-    prop: 'value'
-  },
   props: {
     value: {
       type: Number,
@@ -27,11 +23,11 @@ export default {
   },
   methods: {
     plus() {
-      this.$emit('change', this.value + 1)
+      this.$emit('input', this.value + 1)
     },
     minus() {
       if (this.minValue < this.value) {
-        this.$emit('change', this.value - 1)
+        this.$emit('input', this.value - 1)
       }
     }
   }

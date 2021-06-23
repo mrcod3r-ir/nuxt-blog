@@ -2,9 +2,16 @@
   <div>
     <h1>form</h1>
     <br />
-    <h2>form validation</h2>
-    <label>number : </label>
-    <text-input v-model="number"></text-input>
+    <h2>form validation by vee-validate</h2>
+    <validation-provider v-slot="{ errors }" rules="even">
+      <input v-model="numberValue" type="number" />
+      <span v-show="errors && errors.length > 0">{{ errors }}</span>
+    </validation-provider>
+    <!-- <validation-provider v-slot="{ errors }" rules="even">
+      <label>number : </label>
+      <text-input v-model="numberValue" type="number"></text-input>
+      <span v-show="errors && errors.lenght > 0">{{ errors[0] }}</span>
+    </validation-provider> -->
     <br />
     <label> firstName: </label>
     <text-input v-model="firstName"></text-input>
@@ -18,17 +25,25 @@
 </template>
 
 <script>
+import { ValidationProvider, extend } from 'vee-validate'
 import NumberPicker from '~/components/ui/NumberPicker.vue'
 import TextInput from '~/components/ui/TextInput.vue'
+extend('even', (value) => {
+  return value % 2 === 0
+})
 export default {
   name: 'Form',
-  components: { TextInput, NumberPicker },
+  components: {
+    TextInput,
+    NumberPicker,
+    ValidationProvider
+  },
   layout: 'training',
   data() {
     return {
       firstName: '',
       count: 5,
-      number: ''
+      numberValue: ''
     }
   },
   watch: {
