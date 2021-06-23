@@ -38,7 +38,7 @@ export default {
     // nuxt i18n
     'nuxt-i18n',  
   ],
-  i18:{
+  i18n:{
     locales: [{ code:'fa', name:'Persian' }],
     defaultLocale: 'en',
     vueI18n: {

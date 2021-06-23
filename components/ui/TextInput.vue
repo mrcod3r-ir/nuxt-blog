@@ -1,7 +1,7 @@
 <template>
   <div>
     <input
-      type="text"
+      :type="type"
       v-bind="$attrs"
       :value="value"
       v-on="{ ...$listeners, input }"
@@ -16,6 +16,10 @@ export default {
     value: {
       type: String,
       default: ''
+    },
+    type: {
+      type: String,
+      default: 'text'
     }
   },
   methods: {
