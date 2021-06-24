@@ -40,7 +40,7 @@ export default {
   ],
   i18n:{
     locales: [{ code:'fa', name:'Persian' }],
-    defaultLocale: 'en',
+    defaultLocale: 'fa',
     vueI18n: {
       fallbackLocale: 'fa',
       messages: {
@@ -69,7 +69,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      lang: 'fa',
     },
   },
 

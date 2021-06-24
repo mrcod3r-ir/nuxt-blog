@@ -30,68 +30,14 @@
             <b-icon-pencil></b-icon-pencil>
             Training
           </template>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-slots' }">slots</nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-watch' }"> watch </nuxt-link>
-          </b-dropdown-item>
-
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-computed' }">
-              computed
-            </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-routing' }"> routing </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-asyncdata' }">
-              asyncdata
-            </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-fetch' }"> fetch </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-errorhandling' }">
-              error handling
-            </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item href="/">
-            <nuxt-link :to="{ name: 'training-errorhandling2' }">
-              error handling 2
-            </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-autocompletelist' }">
-              auto complete list
-            </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-nuxt-middleware' }">
-              nuxt middleware
-            </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-validate' }">
-              validate
-            </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-form' }"> form </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-custom-ui' }">
-              custom-ui
-            </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-life' }"> life </nuxt-link>
-          </b-dropdown-item>
-          <b-dropdown-item>
-            <nuxt-link :to="{ name: 'training-plugin' }"> plugin </nuxt-link>
-          </b-dropdown-item>
+          <template v-for="(link, index) in trainingLinks">
+            <b-dropdown-item
+              :key="index"
+              :href="'/' + link.link.replace('-', '/')"
+            >
+              {{ link.title }}
+            </b-dropdown-item>
+          </template>
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>
@@ -100,7 +46,29 @@
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  data() {
+    return {
+      trainingLinks: [
+        { link: 'training-slots', title: 'slots' },
+        { link: 'training-watch', title: 'watch' },
+        { link: 'training-computed', title: 'computed' },
+        { link: 'training-routing', title: 'routing' },
+        { link: 'training-asyncdata', title: 'asyncdata' },
+        { link: 'training-fetch', title: 'fetch' },
+        { link: 'training-errorhandling', title: 'error handling' },
+        { link: 'training-errorhandling2', title: ' error handling 2' },
+        { link: 'training-autocompletelist', title: 'auto complete list' },
+        { link: 'training-nuxt-middleware', title: 'nuxt middleware' },
+        { link: 'training-validate', title: 'validate' },
+        { link: 'training-form', title: 'form' },
+        { link: 'training-custom-ui', title: 'custom-ui' },
+        { link: 'training-life', title: 'life' },
+        { link: 'training-plugin', title: 'plugin' },
+        { link: '', title: '' }
+      ]
+    }
+  }
 }
 </script>
 

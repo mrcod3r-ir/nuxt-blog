@@ -20,6 +20,10 @@ export default {
     type: {
       type: String,
       default: 'text'
+    },
+    name: {
+      type: String,
+      default: ''
     }
   },
   methods: {

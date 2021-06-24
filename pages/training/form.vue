@@ -4,14 +4,18 @@
     <br />
     <h2>form validation by vee-validate</h2>
 
-    <validation-provider v-slot="{ errors }" rules="even">
+    <validation-provider v-slot="{ errors }" rules="even" name="number">
       <label>number : </label>
-      <text-input v-model="numberValue" :type="`number`"></text-input>
+      <text-input
+        v-model="numberValue"
+        :type="'number'"
+        name="number"
+      ></text-input>
       <span>{{ errors[0] }}</span>
     </validation-provider>
     <br />
     <label> firstName: </label>
-    <text-input v-model="firstName"></text-input>
+    <text-input v-model="firstName" name="firstName"></text-input>
     <br />
     <number-picker
       v-model="count"
