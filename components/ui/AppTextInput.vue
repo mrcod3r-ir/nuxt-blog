@@ -8,7 +8,9 @@
         v-on="{ ...$listeners, input }"
       />
     </div>
-    <div v-if="errors && errors.length > 0">{{ errors[0] }}</div>
+    <div v-if="errors && errors.length > 0" class="text-danger">
+      {{ errors[0] }}
+    </div>
   </validation-provider>
 </template>
 
