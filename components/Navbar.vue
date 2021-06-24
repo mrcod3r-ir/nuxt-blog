@@ -65,6 +65,7 @@ export default {
         { link: 'training-custom-ui', title: 'custom-ui' },
         { link: 'training-life', title: 'life' },
         { link: 'training-plugin', title: 'plugin' },
+        { link: 'training-validate-form', title: 'validate form' },
         { link: '', title: '' }
       ]
     }

@@ -13,7 +13,8 @@
     "logout": "خروج",
     "fields": {
       "number": "عدد",
-      "name": "نام"
+      "name": "نام",
+      "title": "عنوان"
     }
   }
 }

@@ -35,7 +35,7 @@
           submit form
         </button>
         <button type="reset" class="btn btn-outline-secondary" @click="reset">
-          reset form
+          reset form error
         </button>
       </form>
     </validation-observer>
