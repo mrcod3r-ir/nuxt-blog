@@ -12,7 +12,8 @@
     },
     "logout": "خروج",
     "fields": {
-      "number": "عدد"
+      "number": "عدد",
+      "name": "نام"
     }
   }
 }
