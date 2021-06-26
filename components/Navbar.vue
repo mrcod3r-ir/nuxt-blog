@@ -66,6 +66,7 @@ export default {
         { link: 'training-life', title: 'life' },
         { link: 'training-plugin', title: 'plugin' },
         { link: 'training-validate-form', title: 'validate form' },
+        { link: 'training-form-server-validate', title: 'FormServerValidate' },
         { link: '', title: '' }
       ]
     }
