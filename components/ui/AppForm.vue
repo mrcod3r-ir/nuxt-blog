@@ -18,6 +18,11 @@ export default {
     }
   },
   methods: {
+    addError(key, value) {
+      this.$refs.validation.setErrors({
+        [key]: value
+      })
+    },
     reset() {
       this.$refs.validation.reset()
     }

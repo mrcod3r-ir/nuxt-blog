@@ -67,18 +67,28 @@ export default {
   methods: {
     onSubmit() {
       this.formResponse = ''
-      this.$axios
-        .$post('https://jsonplaceholder.typicode.com/posts', this.form)
-        .then((res) => {
-          this.form.title = ''
-          this.form.body = ''
-          this.form.userId = ''
-          this.formResponse = res
-          this.$refs.validateForm.reset()
+      // this.$axios
+      //   .$post('https://jsonplaceholder.typicode.com/posts', this.form)
+      //   .then((res) => {
+      //     this.form.title = ''
+      //     this.form.body = ''
+      //     this.form.userId = ''
+      //     this.formResponse = res
+      //     this.$refs.validateForm.reset()
+      //   })
+      this.$api
+        .$post('/post', {})
+        .then()
+        .catch((e) => {
+          if (e?.response?.status === 422) {
+            const data = e.response.data
+            for (const key in data) {
+              this.$refs.validateForm.addError(key, data[key])
+            }
+          }
         })
     }
   }
 }
 </script>
-
 <style lang="scss" scoped></style>
